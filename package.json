@@ -1,0 +1,38 @@
+{
+  "name": "@kognar/docker-safe-debug-mcp-server",
+  "version": "0.1.0",
+  "description": "Safe, read-only-by-default MCP server for debugging remote Docker containers over SSH",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kognar-ai/docker-safe-debug-mcp-server.git"
+  },
+  "type": "module",
+  "bin": {
+    "docker-safe-debug-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/*.test.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "ssh2": "^1.16.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ssh2": "^1.15.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=18"
+  }
+}
