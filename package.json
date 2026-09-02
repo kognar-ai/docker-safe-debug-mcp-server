@@ -1,6 +1,6 @@
 {
   "name": "@kognar/docker-safe-debug-mcp-server",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Safe, read-only-by-default MCP server for debugging remote Docker containers over SSH",
   "repository": {
     "type": "git",
